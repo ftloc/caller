@@ -4,6 +4,7 @@ import (
 	"reflect"
 )
 
+// CallWith calls the function fn with the given parameters, regardless of the function signature.
 func CallWith(fn interface{}, parameters ...interface{}) {
 	va := reflect.ValueOf(fn)
 	if va.Kind() != reflect.Func {
